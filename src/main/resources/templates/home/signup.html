@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="post" action="/signup">
+	<input type="text" name="username" required>
+	<br>
+	<input type="password" name="password" required>
+	<input type="hidden" name="{{ _csrf.parameterName }}" value = "{{ _csrf.token }}">
+	{{#message }}
+		{{message}}
+	{{/message}}
+	 
+	<button>signup</button>	
+
+</form>
+
+</body>
+</html>
